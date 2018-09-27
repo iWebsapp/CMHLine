@@ -1,0 +1,6 @@
+framework module Pods_CMHLine_Test {
+  umbrella header "Pods-CMHLine Test-umbrella.h"
+
+  export *
+  module * { export * }
+}
