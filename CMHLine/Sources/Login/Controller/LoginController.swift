@@ -15,6 +15,11 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func btnLogin(_ sender: DesignableButton) {
+        performSegue(withIdentifier: "goUser", sender: self )
+    }
+    
     @IBAction func goBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
