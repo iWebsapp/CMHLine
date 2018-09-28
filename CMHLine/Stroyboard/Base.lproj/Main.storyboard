@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7xg-D7-1VR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginFalse" id="BYZ-38-t0r" customClass="MainController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="DPn-dR-UOv"/>
+                    <connections>
+                        <segue destination="LqP-JL-Y7Y" kind="show" identifier="goLogged" id="Ikh-YF-qD7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,36 +104,54 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedEnrollment:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="lpg-Ox-XQA"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9PN-Ch-5rW">
                                                 <rect key="frame" x="0.0" y="52.5" width="247" height="44.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedName:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="6Uh-0m-lVA"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCI-ES-mtG">
                                                 <rect key="frame" x="0.0" y="105" width="247" height="44.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedLastName:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="sJC-kc-nPd"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9c-Lk-Bnz">
                                                 <rect key="frame" x="0.0" y="157.5" width="247" height="45"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedEmail:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="Bwe-a0-tjU"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gl7-g7-xaT">
                                                 <rect key="frame" x="0.0" y="210.5" width="247" height="44.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedPhone:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="nZN-In-glo"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-hp-Ugc">
                                                 <rect key="frame" x="0.0" y="263" width="247" height="44.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="changedPassword:" destination="p0O-Pi-gWZ" eventType="editingChanged" id="c7k-5O-ET2"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZI-o7-wfF" customClass="DesignableButton" customModule="CMHLine" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="315.5" width="247" height="44.5"/>
@@ -144,6 +164,9 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnCreateUser:" destination="p0O-Pi-gWZ" eventType="touchUpInside" id="bGq-X0-Ep1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -228,10 +251,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sj2-b0-3ef"/>
                     </view>
+                    <connections>
+                        <outlet property="listenerCreateUser" destination="2ZI-o7-wfF" id="Zgz-Rw-t8N"/>
+                        <outlet property="txtEmail" destination="N9c-Lk-Bnz" id="KIL-iC-MP2"/>
+                        <outlet property="txtEnrollment" destination="2nv-IR-pB8" id="t7W-eR-P2p"/>
+                        <outlet property="txtLastname" destination="QCI-ES-mtG" id="bdj-Pq-YTv"/>
+                        <outlet property="txtName" destination="9PN-Ch-5rW" id="wj5-U4-HSm"/>
+                        <outlet property="txtPassword" destination="rsT-hp-Ugc" id="3Xp-wQ-99V"/>
+                        <outlet property="txtPhone" destination="Gl7-g7-xaT" id="ceT-wf-09g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUY-mM-2Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.5" y="929.57746478873241"/>
+            <point key="canvasLocation" x="1074" y="948"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="lJe-zp-Zgf">
@@ -269,12 +301,18 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="changedEnrollment:" destination="f4q-LD-JnS" eventType="editingChanged" id="oav-l5-0BK"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FL1-Dh-YnZ">
                                                 <rect key="frame" x="0.0" y="53" width="248" height="45"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="changedPassword:" destination="f4q-LD-JnS" eventType="editingChanged" id="1Hk-Cj-Okz"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7Z-bM-tBn" customClass="DesignableButton" customModule="CMHLine" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="106" width="248" height="45"/>
@@ -364,6 +402,9 @@
                         <viewLayoutGuide key="safeArea" id="COe-jq-jpY"/>
                     </view>
                     <connections>
+                        <outlet property="listenerLogin" destination="z7Z-bM-tBn" id="8Dg-LF-dsJ"/>
+                        <outlet property="txtEnrollment" destination="O8Y-RN-NbP" id="hqA-sV-HY0"/>
+                        <outlet property="txtPassword" destination="FL1-Dh-YnZ" id="pKV-0c-8y1"/>
                         <segue destination="ImB-F6-2CM" kind="show" identifier="goUser" id="81a-RX-5Wi"/>
                     </connections>
                 </viewController>
@@ -372,29 +413,22 @@
             <point key="canvasLocation" x="1946.25" y="130.98591549295776"/>
         </scene>
         <!--User-->
+        <scene sceneID="Idp-YE-3NW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginTrue" storyboardName="User" id="LqP-JL-Y7Y" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3RB-66-Xej"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTu-Vk-NPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947" y="616"/>
+        </scene>
+        <!--User-->
         <scene sceneID="vGG-E2-l0w">
             <objects>
                 <viewControllerPlaceholder storyboardName="User" id="ImB-F6-2CM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7j-HR-c58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2645" y="132"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nEg-Mi-BSj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7xg-D7-1VR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fj4-ke-0IG">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="urV-97-9av"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsh-N0-YqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="268" y="133"/>
         </scene>
     </scenes>
     <resources>

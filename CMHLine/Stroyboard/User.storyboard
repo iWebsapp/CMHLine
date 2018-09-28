@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p2n-yb-LaD">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,34 +12,110 @@
         <!--Noticias-->
         <scene sceneID="JSU-3h-zay">
             <objects>
-                <viewController id="S8T-9i-aoo" sceneMemberID="viewController">
+                <viewController id="S8T-9i-aoo" customClass="BlogController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="paJ-Iz-v3I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuW-0p-a4u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ0-dd-V16">
+                                        <rect key="frame" x="355" y="43" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="HN5-43-Axq"/>
+                                            <constraint firstAttribute="height" constant="35" id="VWz-JB-9Lc"/>
+                                        </constraints>
+                                        <state key="normal" image="icon-logout"/>
+                                        <connections>
+                                            <action selector="btnLogout:" destination="S8T-9i-aoo" eventType="touchUpInside" id="MK3-Og-mO7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="7DU-Un-GLv"/>
+                                    <constraint firstItem="EZ0-dd-V16" firstAttribute="top" secondItem="nuW-0p-a4u" secondAttribute="top" constant="43" id="LBd-SG-4lZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZ0-dd-V16" secondAttribute="trailing" constant="24" id="MMr-yp-g9H"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUE-Vb-vlC">
+                                <rect key="frame" x="0.0" y="90" width="414" height="723"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZUE-Vb-vlC" firstAttribute="leading" secondItem="yUI-s7-0zh" secondAttribute="leading" id="DfB-mh-4b4"/>
+                            <constraint firstItem="ZUE-Vb-vlC" firstAttribute="trailing" secondItem="yUI-s7-0zh" secondAttribute="trailing" id="TW9-CK-ABX"/>
+                            <constraint firstItem="nuW-0p-a4u" firstAttribute="top" secondItem="paJ-Iz-v3I" secondAttribute="top" id="dNY-RM-4HM"/>
+                            <constraint firstItem="nuW-0p-a4u" firstAttribute="trailing" secondItem="yUI-s7-0zh" secondAttribute="trailing" id="hho-9C-b3m"/>
+                            <constraint firstItem="ZUE-Vb-vlC" firstAttribute="top" secondItem="yUI-s7-0zh" secondAttribute="top" constant="46" id="klX-Ss-nh7"/>
+                            <constraint firstItem="ZUE-Vb-vlC" firstAttribute="bottom" secondItem="yUI-s7-0zh" secondAttribute="bottom" id="lhw-VF-IbX"/>
+                            <constraint firstItem="nuW-0p-a4u" firstAttribute="leading" secondItem="yUI-s7-0zh" secondAttribute="leading" id="y5a-Ue-qtg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yUI-s7-0zh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Noticias" image="icon-news" id="OLd-b5-grP"/>
+                    <connections>
+                        <outlet property="webView" destination="ZUE-Vb-vlC" id="ZHn-uY-K6j"/>
+                        <segue destination="5oN-IV-xHL" kind="show" identifier="goLogout" id="utK-y4-OO0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvf-ja-Dsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1517" y="865"/>
+            <point key="canvasLocation" x="-1518.840579710145" y="863.83928571428567"/>
         </scene>
         <!--Sesiones en vivo-->
         <scene sceneID="Jch-tA-Lr9">
             <objects>
-                <viewController id="SH1-Xd-Blf" sceneMemberID="viewController">
+                <viewController id="SH1-Xd-Blf" customClass="LiveSessionsController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ORF-Uh-9q9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8r-I0-SWX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="AiX-By-rQ1"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-Jy-2mk">
+                                <rect key="frame" x="0.0" y="89.999999999999986" width="414" height="220.66666666666663"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eeS-Jy-2mk" secondAttribute="height" multiplier="319:170" id="6EH-gG-Gnc"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eeS-Jy-2mk" firstAttribute="leading" secondItem="nzp-tb-csu" secondAttribute="leading" id="6rT-bJ-Smd"/>
+                            <constraint firstItem="D8r-I0-SWX" firstAttribute="leading" secondItem="nzp-tb-csu" secondAttribute="leading" id="XDh-xP-xKr"/>
+                            <constraint firstItem="nzp-tb-csu" firstAttribute="trailing" secondItem="eeS-Jy-2mk" secondAttribute="trailing" id="bi9-pM-rXQ"/>
+                            <constraint firstItem="D8r-I0-SWX" firstAttribute="top" secondItem="ORF-Uh-9q9" secondAttribute="top" id="gh6-Qv-kOJ"/>
+                            <constraint firstItem="eeS-Jy-2mk" firstAttribute="top" secondItem="D8r-I0-SWX" secondAttribute="bottom" id="nKV-sE-2nP"/>
+                            <constraint firstItem="nzp-tb-csu" firstAttribute="trailing" secondItem="D8r-I0-SWX" secondAttribute="trailing" id="nRj-Kx-vWt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nzp-tb-csu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sesiones en vivo" image="icon-live-session" id="PRD-en-FEz"/>
+                    <connections>
+                        <outlet property="webView" destination="eeS-Jy-2mk" id="o8U-db-qd0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Y5-85-Z3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="864"/>
+            <point key="canvasLocation" x="-680.625" y="863.75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6yP-3k-6dp">
@@ -48,6 +123,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="p2n-yb-LaD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rx2-K9-JGq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -65,14 +141,43 @@
         <!--Sesiones pasadas-->
         <scene sceneID="4Bm-Mc-RXH">
             <objects>
-                <viewController id="093-Lr-LKa" sceneMemberID="viewController">
+                <viewController id="093-Lr-LKa" customClass="LastSessionsController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YkI-0n-L09">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-na-0zh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="L5b-vj-j7J"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR9-MR-9Cj">
+                                <rect key="frame" x="0.0" y="90" width="414" height="723"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UeK-na-0zh" firstAttribute="leading" secondItem="Od0-NK-tCv" secondAttribute="leading" id="172-Jt-Gdo"/>
+                            <constraint firstItem="Od0-NK-tCv" firstAttribute="trailing" secondItem="UeK-na-0zh" secondAttribute="trailing" id="Fbm-8S-GHZ"/>
+                            <constraint firstItem="hR9-MR-9Cj" firstAttribute="leading" secondItem="Od0-NK-tCv" secondAttribute="leading" id="I6k-ol-PI3"/>
+                            <constraint firstItem="Od0-NK-tCv" firstAttribute="trailing" secondItem="hR9-MR-9Cj" secondAttribute="trailing" id="My7-xd-U82"/>
+                            <constraint firstItem="hR9-MR-9Cj" firstAttribute="top" secondItem="UeK-na-0zh" secondAttribute="bottom" id="Vse-Hf-Zbb"/>
+                            <constraint firstItem="UeK-na-0zh" firstAttribute="top" secondItem="YkI-0n-L09" secondAttribute="top" id="YJh-wm-ag7"/>
+                            <constraint firstItem="Od0-NK-tCv" firstAttribute="bottom" secondItem="hR9-MR-9Cj" secondAttribute="bottom" id="keU-86-Eup"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Od0-NK-tCv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sesiones pasadas" image="icon-last-sessions" id="q50-vy-kbP"/>
+                    <connections>
+                        <outlet property="webView" destination="hR9-MR-9Cj" id="XQZ-Cu-xBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puD-mT-Vo2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,24 +186,158 @@
         <!--Contacto-->
         <scene sceneID="kj3-j0-csk">
             <objects>
-                <viewController id="r73-K7-XyI" sceneMemberID="viewController">
+                <viewController id="r73-K7-XyI" customClass="ContactController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iey-JF-2PI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1Q-ez-Hl8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="hfz-Tc-Yl9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxi-VW-KdQ" customClass="DesignableGradient" customModule="CMHLine" customModuleProvider="target">
+                                <rect key="frame" x="16" y="190" width="382" height="402"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vakkadikud No. 400, Colonia Ex Hacienda de Guadalupe, CP: 4200 Pachuca Hidalgo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p37-2l-N11">
+                                        <rect key="frame" x="27" y="50" width="328" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono: (771) 7141 167" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2m-lw-ned">
+                                        <rect key="frame" x="27" y="123.66666666666669" width="327" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://facebook.com/ColegioMedicoHidalguense" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-gQ-Zh3">
+                                        <rect key="frame" x="27" y="180.66666666666669" width="328" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://twitter.com/cmh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1F-72-4HB">
+                                        <rect key="frame" x="27" y="237.66666666666669" width="328" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://colegiomedicohidalguense.org.mx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQD-gD-F7S">
+                                        <rect key="frame" x="27" y="294.66666666666669" width="328" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo: colegiomedico_cmh@yahoo.com.mx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slu-jR-AIc">
+                                        <rect key="frame" x="27" y="351.66666666666663" width="328" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Y1F-72-4HB" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="0kb-V8-w2z"/>
+                                    <constraint firstAttribute="trailing" secondItem="p37-2l-N11" secondAttribute="trailing" constant="27" id="6Q2-Em-a0H"/>
+                                    <constraint firstItem="q2m-lw-ned" firstAttribute="top" secondItem="p37-2l-N11" secondAttribute="bottom" constant="40" id="7uL-lL-fAc"/>
+                                    <constraint firstItem="aQD-gD-F7S" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="88b-Sn-YUH"/>
+                                    <constraint firstAttribute="trailing" secondItem="aQD-gD-F7S" secondAttribute="trailing" constant="27" id="9bU-aL-8uz"/>
+                                    <constraint firstAttribute="trailing" secondItem="VDI-gQ-Zh3" secondAttribute="trailing" constant="27" id="GWP-05-KHr"/>
+                                    <constraint firstItem="Slu-jR-AIc" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="Iwz-aN-KtX"/>
+                                    <constraint firstItem="Slu-jR-AIc" firstAttribute="top" secondItem="aQD-gD-F7S" secondAttribute="bottom" constant="40" id="LIw-V8-2Yc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Slu-jR-AIc" secondAttribute="trailing" constant="27" id="Lcx-ST-4kC"/>
+                                    <constraint firstItem="q2m-lw-ned" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="V73-T1-4NZ"/>
+                                    <constraint firstItem="VDI-gQ-Zh3" firstAttribute="top" secondItem="q2m-lw-ned" secondAttribute="bottom" constant="40" id="VpV-T5-Sh7"/>
+                                    <constraint firstItem="p37-2l-N11" firstAttribute="top" secondItem="Hxi-VW-KdQ" secondAttribute="top" constant="50" id="XGl-kW-Ksr"/>
+                                    <constraint firstItem="Y1F-72-4HB" firstAttribute="top" secondItem="VDI-gQ-Zh3" secondAttribute="bottom" constant="40" id="h0n-Ih-Occ"/>
+                                    <constraint firstItem="VDI-gQ-Zh3" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="luR-Gr-KrK"/>
+                                    <constraint firstAttribute="height" constant="402" id="pie-ep-FS6"/>
+                                    <constraint firstItem="p37-2l-N11" firstAttribute="leading" secondItem="Hxi-VW-KdQ" secondAttribute="leading" constant="27" id="rFa-wN-9lo"/>
+                                    <constraint firstAttribute="trailing" secondItem="q2m-lw-ned" secondAttribute="trailing" constant="28" id="uGo-at-37I"/>
+                                    <constraint firstItem="aQD-gD-F7S" firstAttribute="top" secondItem="Y1F-72-4HB" secondAttribute="bottom" constant="40" id="xfx-Jo-fR4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y1F-72-4HB" secondAttribute="trailing" constant="27" id="yhQ-7N-jG0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_cmh" translatesAutoresizingMaskIntoConstraints="NO" id="kex-0z-vlu">
+                                <rect key="frame" x="157" y="125" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0YO-2s-kIY"/>
+                                    <constraint firstAttribute="height" constant="100" id="WV6-lh-aSE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kex-0z-vlu" firstAttribute="centerX" secondItem="iey-JF-2PI" secondAttribute="centerX" id="0jF-iI-y9e"/>
+                            <constraint firstItem="Hxi-VW-KdQ" firstAttribute="top" secondItem="F1Q-ez-Hl8" secondAttribute="bottom" constant="100" id="5Oc-LL-bwI"/>
+                            <constraint firstItem="Xro-5e-Ec0" firstAttribute="trailing" secondItem="Hxi-VW-KdQ" secondAttribute="trailing" constant="16" id="L7I-Lv-wC8"/>
+                            <constraint firstItem="F1Q-ez-Hl8" firstAttribute="leading" secondItem="Xro-5e-Ec0" secondAttribute="leading" id="Ocr-HT-WSg"/>
+                            <constraint firstItem="Xro-5e-Ec0" firstAttribute="trailing" secondItem="F1Q-ez-Hl8" secondAttribute="trailing" id="Q6t-hh-5bQ"/>
+                            <constraint firstItem="kex-0z-vlu" firstAttribute="top" secondItem="F1Q-ez-Hl8" secondAttribute="bottom" constant="35" id="YMO-Mi-qic"/>
+                            <constraint firstItem="Hxi-VW-KdQ" firstAttribute="leading" secondItem="Xro-5e-Ec0" secondAttribute="leading" constant="16" id="bqr-rt-rEk"/>
+                            <constraint firstItem="F1Q-ez-Hl8" firstAttribute="top" secondItem="iey-JF-2PI" secondAttribute="top" id="vNZ-zm-q9o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xro-5e-Ec0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacto" image="icon-contact" id="V8f-pB-59Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EeR-VG-4I8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="866"/>
+            <point key="canvasLocation" x="1643.4782608695652" y="865.84821428571422"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Fey-bs-sMp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="5oN-IV-xHL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YX-nj-PsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1519" y="1298"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon-contact" width="37.5" height="37.5"/>
         <image name="icon-last-sessions" width="37.5" height="37.5"/>
         <image name="icon-live-session" width="37.5" height="37.5"/>
+        <image name="icon-logout" width="39" height="39"/>
         <image name="icon-news" width="37.5" height="37.5"/>
+        <image name="logo_cmh" width="255" height="255"/>
     </resources>
 </document>

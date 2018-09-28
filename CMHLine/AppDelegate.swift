@@ -13,9 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //UserDefaults.standard.set("login", forKey: "token")
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if UserDefaults.standard.string(forKey: "token") == nil {
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil )
+            let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "loginFalse")
+            self.window?.rootViewController = mainViewController
+            self.window?.makeKeyAndVisible()
+        } else {
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil )
+            let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "loginTrue")
+            self.window?.rootViewController = mainViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

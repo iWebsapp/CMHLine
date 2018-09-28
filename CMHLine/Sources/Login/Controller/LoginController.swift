@@ -7,21 +7,70 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LoginController: UIViewController {
 
+    @IBOutlet weak var txtEnrollment: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var listenerLogin: DesignableButton!
+    private let loginModel:LoginModel = LoginModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        listenerLogin.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
+    private func valid(){
+        if (txtEnrollment.text?.count)! > 0 {
+            if (txtPassword.text?.count)! > 0 {
+                listenerLogin.isEnabled = true
+            } else {
+                listenerLogin.isEnabled = false
+            }
+        } else {
+            listenerLogin.isEnabled = false
+        }
+    }
+    
+    @IBAction func changedEnrollment(_ sender: UITextField) {
+        if (txtEnrollment.text?.count)! > 0 {
+            valid()
+        } else {
+            listenerLogin.isEnabled = false
+        }
+    }
+    
+    @IBAction func changedPassword(_ sender: UITextField) {
+        if (txtPassword.text?.count)! > 0 {
+            valid()
+        } else {
+            listenerLogin.isEnabled = false
+        }
+    }
     
     @IBAction func btnLogin(_ sender: DesignableButton) {
-        performSegue(withIdentifier: "goUser", sender: self )
+        loginModel.login(enrollment: txtEnrollment.text!, password: txtPassword.text!) { response in
+            let data = JSON(response)
+            if(data[0].count) == 0 {
+                self.alertSimple(this: self, titileAlert: "Se ha producido un error", bodyAlert: "Tus credenciales son invalidas", complete: { resp in
+                    self.txtPassword.text = ""
+                    self.txtEnrollment.text = ""
+                })
+            } else {
+                UserDefaults.standard.set("login success", forKey: "token")
+                self.performSegue(withIdentifier: "goUser", sender: self )
+            }
+        }
     }
     
     @IBAction func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil )
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     /*
     // MARK: - Navigation
