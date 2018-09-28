@@ -881,14 +881,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = CMHLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -901,14 +901,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-release";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = CMHLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -921,14 +921,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = "$(SRCROOT)/CMHLine dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -941,14 +941,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = "$(SRCROOT)/CMHLine dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -961,14 +961,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-test";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = "$(SRCROOT)/CMHLine test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -981,14 +981,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-test";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y99AD5GLT5;
+				DEVELOPMENT_TEAM = MZ2TJUFH85;
 				INFOPLIST_FILE = "$(SRCROOT)/CMHLine test-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iwebsapp.CMHLine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CMHLINE.CMHLINE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
