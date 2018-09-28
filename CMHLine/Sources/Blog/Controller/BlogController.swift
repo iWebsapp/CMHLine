@@ -20,14 +20,5 @@ class BlogController: UIViewController {
         webView.load(req)
     }
     
-    @IBAction func btnLogout(_ sender: UIButton) {
-        self.alertAvanced(this: self, titileAlert: "Cerrar sesión", bodyAlert: "¿Está seguro de cerrar su sessión?") { response in
-            if response == "acept" {
-                UserDefaults.standard.removeObject(forKey: "token")
-                self.performSegue(withIdentifier: "goLogout", sender: self )
-            }
-        }
-    }
-    
-    
+
 }

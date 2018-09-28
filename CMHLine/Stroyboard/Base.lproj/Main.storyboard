@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="loginFalse" id="BYZ-38-t0r" customClass="MainController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rx2-L6-0Wk">
-                                <rect key="frame" x="25" y="234" width="270" height="100"/>
+                                <rect key="frame" x="25" y="190" width="270" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-Vh-b3c" customClass="DesignableButton" customModule="CMHLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="46"/>
@@ -84,7 +84,7 @@
             <objects>
                 <viewController id="p0O-Pi-gWZ" customClass="NewUserController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dg7-xK-jsU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyP-st-tNg">
@@ -94,7 +94,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-EX-ZyM" customClass="DesignableGradient" customModule="CMHLine" customModuleProvider="target">
-                                <rect key="frame" x="16" y="127.5" width="287" height="424.5"/>
+                                <rect key="frame" x="16" y="117.5" width="287" height="424.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gLP-16-qNL">
                                         <rect key="frame" x="20" y="45" width="247" height="360"/>
@@ -229,7 +229,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="eec-dr-L87">
-                                <rect key="frame" x="110" y="75" width="100" height="100"/>
+                                <rect key="frame" x="110" y="67.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ZDe-Dw-FyQ"/>
                                     <constraint firstAttribute="width" constant="100" id="zxE-p7-tzs"/>
@@ -244,13 +244,14 @@
                             <constraint firstItem="hWU-EX-ZyM" firstAttribute="leading" secondItem="sj2-b0-3ef" secondAttribute="leading" constant="16" id="I2H-Iy-vXV"/>
                             <constraint firstItem="sj2-b0-3ef" firstAttribute="trailing" secondItem="hWU-EX-ZyM" secondAttribute="trailing" constant="17" id="PqQ-TH-0FE"/>
                             <constraint firstItem="J2Y-Za-bYv" firstAttribute="top" secondItem="sj2-b0-3ef" secondAttribute="top" constant="16" id="Q03-wC-Qaz"/>
-                            <constraint firstItem="eec-dr-L87" firstAttribute="top" secondItem="NyP-st-tNg" secondAttribute="bottom" constant="7.5" id="ROg-nQ-nxB"/>
+                            <constraint firstItem="eec-dr-L87" firstAttribute="top" secondItem="NyP-st-tNg" secondAttribute="bottom" id="ROg-nQ-nxB"/>
                             <constraint firstItem="J2Y-Za-bYv" firstAttribute="leading" secondItem="sj2-b0-3ef" secondAttribute="leading" constant="16" id="SLO-oa-sdQ"/>
                             <constraint firstItem="NyP-st-tNg" firstAttribute="top" secondItem="sj2-b0-3ef" secondAttribute="top" constant="16" id="ajs-vD-4el"/>
-                            <constraint firstItem="hWU-EX-ZyM" firstAttribute="top" secondItem="NyP-st-tNg" secondAttribute="bottom" constant="60" id="dnH-eB-WTk"/>
+                            <constraint firstItem="hWU-EX-ZyM" firstAttribute="top" secondItem="NyP-st-tNg" secondAttribute="bottom" constant="50" id="dnH-eB-WTk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sj2-b0-3ef"/>
                     </view>
+                    <size key="freeformSize" width="320" height="600"/>
                     <connections>
                         <outlet property="listenerCreateUser" destination="2ZI-o7-wfF" id="Zgz-Rw-t8N"/>
                         <outlet property="txtEmail" destination="N9c-Lk-Bnz" id="KIL-iC-MP2"/>
@@ -270,7 +271,7 @@
             <objects>
                 <viewController id="f4q-LD-JnS" customClass="LoginController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ni-vZ-3to">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQr-Hs-41G">
