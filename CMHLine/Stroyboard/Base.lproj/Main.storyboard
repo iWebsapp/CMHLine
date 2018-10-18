@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="loginFalse" id="BYZ-38-t0r" customClass="MainController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rx2-L6-0Wk">
-                                <rect key="frame" x="25" y="190" width="270" height="100"/>
+                                <rect key="frame" x="25" y="234" width="270" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-Vh-b3c" customClass="DesignableButton" customModule="CMHLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="46"/>
@@ -32,20 +33,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="f4q-LD-JnS" kind="show" id="lpS-6A-FGd"/>
+                                            <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvC-Od-8p1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBK-FN-V5x" customClass="DesignableButton" customModule="CMHLine" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="270" height="46"/>
-                                        <state key="normal" title="Registrar"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="p0O-Pi-gWZ" kind="show" id="dZn-du-E6Q"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -73,6 +70,8 @@
                     <navigationItem key="navigationItem" id="DPn-dR-UOv"/>
                     <connections>
                         <segue destination="LqP-JL-Y7Y" kind="show" identifier="goLogged" id="Ikh-YF-qD7"/>
+                        <segue destination="p0O-Pi-gWZ" kind="show" identifier="goNewUser" id="mx9-vg-h6J"/>
+                        <segue destination="ImB-F6-2CM" kind="show" identifier="goUser" id="p6P-Zx-Ygt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -271,7 +270,7 @@
             <objects>
                 <viewController id="f4q-LD-JnS" customClass="LoginController" customModule="CMHLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ni-vZ-3to">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQr-Hs-41G">
@@ -406,7 +405,6 @@
                         <outlet property="listenerLogin" destination="z7Z-bM-tBn" id="8Dg-LF-dsJ"/>
                         <outlet property="txtEnrollment" destination="O8Y-RN-NbP" id="hqA-sV-HY0"/>
                         <outlet property="txtPassword" destination="FL1-Dh-YnZ" id="pKV-0c-8y1"/>
-                        <segue destination="ImB-F6-2CM" kind="show" identifier="goUser" id="81a-RX-5Wi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NN-ag-q5j" userLabel="First Responder" sceneMemberID="firstResponder"/>

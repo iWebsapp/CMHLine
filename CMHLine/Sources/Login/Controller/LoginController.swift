@@ -53,6 +53,7 @@ class LoginController: UIViewController {
     @IBAction func btnLogin(_ sender: DesignableButton) {
         loginModel.login(enrollment: txtEnrollment.text!, password: txtPassword.text!) { response in
             let data = JSON(response)
+            print(data[0].count)
             if(data[0].count) == 0 {
                 self.alertSimple(this: self, titileAlert: "Se ha producido un error", bodyAlert: "Tus credenciales son invalidas", complete: { resp in
                     self.txtPassword.text = ""

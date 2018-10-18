@@ -15,9 +15,12 @@ class LastSessionsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://www.ustream.tv/socialstream/23582106")
-        let req = URLRequest(url: url!)
-        webView.load(req)
+        DispatchQueue.main.async {
+            let url = URL(string: "http://www.ustream.tv/socialstream/23582106")
+            let req = URLRequest(url: url!)
+            self.webView.load(req)
+        }
+        
     }
     
 

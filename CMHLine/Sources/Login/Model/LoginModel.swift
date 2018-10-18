@@ -32,6 +32,7 @@ class LoginModel {
     public func login( enrollment:String, password:String, complete: @escaping ((Any) -> Void)) {
         self.setLogin(enrollment: enrollment, password: password) { response in
             let data = JSON(response)
+            print(response)
             complete(data)
         }
     }

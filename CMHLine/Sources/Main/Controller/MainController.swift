@@ -14,6 +14,11 @@ class MainController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func btnLogin(_ sender: DesignableButton) {
+        UserDefaults.standard.set("login success", forKey: "token")
+        self.performSegue(withIdentifier: "goUser", sender: self )
+    }
 
 
 }
